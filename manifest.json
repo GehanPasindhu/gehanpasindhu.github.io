@@ -1,0 +1,29 @@
+{
+  "name": "Gehan Pasindhu – Senior Software Engineer & Tech Lead",
+  "short_name": "Gehan Pasindhu",
+  "description": "Gehan Pasindhu, Senior Software Engineer and Tech Lead in Colombo, Sri Lanka. Real-time sports broadcast automation, React Native league apps, full-stack web, and data science.",
+  "id": "/",
+  "start_url": "/",
+  "scope": "/",
+  "display": "standalone",
+  "orientation": "any",
+  "background_color": "#F6F7F8",
+  "theme_color": "#F6F7F8",
+  "lang": "en",
+  "dir": "ltr",
+  "categories": ["portfolio", "business", "productivity"],
+  "icons": [
+    {
+      "src": "/icon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any"
+    },
+    {
+      "src": "/icon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "maskable"
+    }
+  ]
+}
