@@ -1,0 +1,400 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Gehan Pasindhu – Senior Software Engineer & Tech Lead</title>
+<meta name="description" content="Gehan Pasindhu, Senior Software Engineer and Tech Lead in Colombo, Sri Lanka. Real-time sports broadcast automation, React Native league apps, full-stack web, and data science.">
+<meta property="og:title" content="Gehan Pasindhu – Senior Software Engineer & Tech Lead">
+<meta property="og:description" content="Real-time sports broadcast automation, league mobile apps, and full-stack web.">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='18' fill='%231B4FD1'/><text x='50' y='66' font-size='46' text-anchor='middle' fill='white' font-family='Arial' font-weight='700'>GP</text></svg>">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Schibsted+Grotesk:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --paper: #F6F7F8;
+    --surface: #FFFFFF;
+    --ink: #15181C;
+    --muted: #5B636D;
+    --line: #DCE0E4;
+    --court: #1B4FD1;
+    --live: #E0352B;
+    --font: "Schibsted Grotesk", "Helvetica Neue", Arial, sans-serif;
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  html { scroll-behavior: smooth; }
+  body {
+    font-family: var(--font);
+    background: var(--paper);
+    color: var(--ink);
+    font-size: 17px;
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+  }
+  a { color: var(--court); text-underline-offset: 3px; }
+  a:hover { text-decoration-thickness: 2px; }
+  :focus-visible { outline: 2px solid var(--court); outline-offset: 3px; border-radius: 3px; }
+
+  .wrap { max-width: 980px; margin: 0 auto; padding: 0 24px; }
+
+  /* Top bar */
+  .top {
+    display: flex; justify-content: space-between; align-items: center;
+    padding: 22px 0; font-size: 15px;
+  }
+  .top .name { font-weight: 700; color: var(--ink); text-decoration: none; }
+  .top nav { display: flex; gap: 22px; }
+  .top nav a { color: var(--muted); text-decoration: none; }
+  .top nav a:hover { color: var(--ink); }
+
+  /* Hero */
+  .hero { padding: 64px 0 72px; }
+  .hero h1 {
+    font-size: clamp(38px, 6.4vw, 68px);
+    line-height: 1.04;
+    letter-spacing: -0.025em;
+    font-weight: 800;
+    max-width: 15ch;
+  }
+  .hero .lede {
+    margin-top: 24px;
+    font-size: 19px;
+    color: var(--muted);
+    max-width: 58ch;
+  }
+  .hero .actions { margin-top: 32px; display: flex; flex-wrap: wrap; gap: 12px; }
+  .btn {
+    display: inline-block; padding: 11px 20px; border-radius: 8px;
+    font-weight: 600; font-size: 15px; text-decoration: none;
+    border: 1.5px solid var(--ink);
+  }
+  .btn.primary { background: var(--ink); color: #fff; }
+  .btn.primary:hover { background: var(--court); border-color: var(--court); }
+  .btn.ghost { color: var(--ink); background: transparent; }
+  .btn.ghost:hover { border-color: var(--court); color: var(--court); }
+
+  /* Score bug: the one signature element */
+  .bug-wrap { margin-top: 56px; }
+  .bug {
+    display: inline-grid;
+    grid-template-columns: auto 1fr auto;
+    background: var(--ink);
+    color: #fff;
+    border-radius: 10px;
+    overflow: hidden;
+    font-variant-numeric: tabular-nums;
+    box-shadow: 0 18px 40px -22px rgba(21,24,28,.55);
+    max-width: 100%;
+  }
+  .bug .tag {
+    background: var(--live);
+    padding: 14px 16px;
+    font-weight: 700; font-size: 14px;
+    display: flex; align-items: center; gap: 8px;
+  }
+  .bug .tag .dot { width: 8px; height: 8px; border-radius: 50%; background: #fff; animation: pulse 1.6s ease-in-out infinite; }
+  .bug .teams { display: grid; }
+  .bug .row {
+    display: grid; grid-template-columns: minmax(120px, 1fr) repeat(3, 34px);
+    align-items: center; padding: 7px 16px; gap: 4px; font-size: 15px;
+  }
+  .bug .row + .row { border-top: 1px solid rgba(255,255,255,.12); }
+  .bug .row span:not(:first-child) { text-align: center; font-weight: 600; }
+  .bug .row .cur { color: #fff; background: var(--court); border-radius: 4px; }
+  .bug .clock {
+    background: #23282E; padding: 0 18px;
+    display: flex; flex-direction: column; justify-content: center;
+    font-size: 13px; color: #B9C0C8; line-height: 1.3;
+  }
+  .bug .clock b { color: #fff; font-size: 17px; }
+  .bug-caption { margin-top: 12px; font-size: 14px; color: var(--muted); }
+  .flip { display: inline-block; }
+  .flip.bump { animation: bump .45s ease-out; }
+  @keyframes pulse { 50% { opacity: .35; } }
+  @keyframes bump { 0% { transform: translateY(-6px); opacity: 0; } 100% { transform: none; opacity: 1; } }
+
+  /* Sections */
+  section { padding: 64px 0; border-top: 1px solid var(--line); }
+  h2 {
+    font-size: 30px; letter-spacing: -0.015em; font-weight: 700; line-height: 1.2;
+  }
+  .section-intro { color: var(--muted); margin-top: 8px; max-width: 60ch; }
+
+  /* Work: a genuine timeline */
+  .timeline { margin-top: 36px; }
+  .job {
+    display: grid; grid-template-columns: 170px 1fr; gap: 28px;
+    padding: 26px 0;
+  }
+  .job + .job { border-top: 1px solid var(--line); }
+  .job .when { color: var(--muted); font-size: 15px; font-variant-numeric: tabular-nums; padding-top: 3px; }
+  .job h3 { font-size: 20px; font-weight: 700; line-height: 1.3; }
+  .job .org { color: var(--muted); font-size: 16px; }
+  .job p { margin-top: 10px; max-width: 64ch; }
+  .job ul { margin-top: 12px; padding-left: 20px; max-width: 64ch; }
+  .job li { margin-top: 6px; }
+  .job li::marker { color: var(--court); }
+
+  /* Projects */
+  .feature {
+    margin-top: 36px;
+    background: var(--surface);
+    border: 1px solid var(--line);
+    border-radius: 14px;
+    padding: 36px;
+  }
+  .feature h3 { font-size: 26px; letter-spacing: -0.01em; line-height: 1.2; }
+  .feature .for { color: var(--muted); margin-top: 4px; }
+  .feature p { margin-top: 16px; max-width: 64ch; }
+  .facts { display: flex; flex-wrap: wrap; gap: 36px; margin-top: 28px; }
+  .facts div { font-size: 15px; color: var(--muted); max-width: 22ch; }
+  .facts b { display: block; color: var(--ink); font-size: 28px; letter-spacing: -0.02em; line-height: 1.1; margin-bottom: 4px; }
+
+  .projects { display: grid; grid-template-columns: 1fr 1fr; gap: 0 40px; margin-top: 12px; }
+  .proj { padding: 28px 0; border-bottom: 1px solid var(--line); }
+  .proj h3 { font-size: 19px; line-height: 1.3; }
+  .proj .for { color: var(--muted); font-size: 15px; }
+  .proj p { margin-top: 10px; }
+  .proj .links { margin-top: 12px; display: flex; flex-wrap: wrap; gap: 16px; font-size: 15px; font-weight: 600; }
+  .proj.wide { grid-column: 1 / -1; }
+  .stack { margin-top: 10px; font-size: 14px; color: var(--muted); }
+
+  /* Skills */
+  .skills { margin-top: 32px; display: grid; grid-template-columns: 200px 1fr; }
+  .skills dt, .skills dd { padding: 13px 0; border-top: 1px solid var(--line); }
+  .skills dt { font-weight: 600; }
+  .skills dd { color: var(--muted); }
+
+  /* Education */
+  .edu { margin-top: 28px; }
+  .edu div { display: grid; grid-template-columns: 1fr auto; gap: 16px; padding: 14px 0; border-top: 1px solid var(--line); }
+  .edu b { font-weight: 600; }
+  .edu span { color: var(--muted); }
+  .edu .yr { font-variant-numeric: tabular-nums; }
+
+  /* Contact */
+  .contact h2 { font-size: clamp(28px, 4.4vw, 42px); max-width: 20ch; }
+  .contact .mail { display: inline-block; margin-top: 20px; font-size: clamp(20px, 3vw, 26px); font-weight: 700; }
+  .contact .elsewhere { margin-top: 24px; display: flex; flex-wrap: wrap; gap: 22px; font-weight: 600; }
+  .contact .avail { margin-top: 28px; color: var(--muted); max-width: 60ch; }
+  footer { padding: 28px 0 40px; color: var(--muted); font-size: 14px; border-top: 1px solid var(--line); }
+
+  @media (max-width: 760px) {
+    body { font-size: 16px; }
+    .top nav { display: none; }
+    .hero { padding: 36px 0 52px; }
+    .job { grid-template-columns: 1fr; gap: 6px; }
+    .projects { grid-template-columns: 1fr; }
+    .feature { padding: 24px; }
+    .skills { grid-template-columns: 1fr; }
+    .skills dd { border-top: 0; padding-top: 0; }
+    .bug { grid-template-columns: auto 1fr; }
+    .bug .clock { display: none; }
+    .bug .row { grid-template-columns: minmax(96px, 1fr) repeat(3, 28px); }
+  }
+  @media (prefers-reduced-motion: reduce) {
+    *, *::before, *::after { animation: none !important; scroll-behavior: auto !important; }
+  }
+  @media print {
+    .top nav, .actions, .bug-wrap { display: none; }
+    section { padding: 24px 0; }
+  }
+</style>
+</head>
+<body>
+
+<div class="wrap">
+  <header class="top">
+    <a class="name" href="#">Gehan Pasindhu</a>
+    <nav aria-label="Sections">
+      <a href="#work">Work</a>
+      <a href="#projects">Projects</a>
+      <a href="#skills">Skills</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </header>
+
+  <main>
+    <div class="hero">
+      <h1>I build the software behind live sports.</h1>
+      <p class="lede">Senior Software Engineer and Tech Lead in Colombo, Sri Lanka. I build real-time broadcast automation, league mobile apps, and full-stack web platforms, with 8+ years building software and an MSc in Data Science.</p>
+      <div class="actions">
+        <a class="btn primary" href="Gehan-Pasindhu-CV.pdf" download>Download CV</a>
+        <a class="btn ghost" href="#contact">Get in touch</a>
+      </div>
+
+      <div class="bug-wrap">
+        <div class="bug" role="img" aria-label="Example live scoring graphic, like those driven by my broadcast automation systems">
+          <div class="tag"><span class="dot"></span>Live</div>
+          <div class="teams">
+            <div class="row"><span>Home</span><span>6</span><span>3</span><span class="cur"><span class="flip" id="scoreA">4</span></span></div>
+            <div class="row"><span>Away</span><span>4</span><span>6</span><span class="cur"><span class="flip" id="scoreB">3</span></span></div>
+          </div>
+          <div class="clock"><span>Set 3</span><b id="clock">1:12:40</b></div>
+        </div>
+        <p class="bug-caption">An example of the live on-air graphics my broadcast systems drive.</p>
+      </div>
+    </div>
+
+    <section id="work" aria-labelledby="work-h">
+      <h2 id="work-h">Work</h2>
+      <div class="timeline">
+        <article class="job">
+          <div class="when">June 2023 – now</div>
+          <div>
+            <h3>Senior Software Engineer &amp; Tech Lead</h3>
+            <div class="org">Eventistry, 87.agency</div>
+            <p>I lead full-stack and mobile development for sports and event platforms across the Eventistry group, including Key Sports Network. I drive Agile delivery, mentor junior engineers, and work alongside 20+ member broadcast production teams during live events.</p>
+            <ul>
+              <li>Real-time broadcast automation for auction lineups, live auction updates, and live scoring across full league coverage, up to 5 broadcast days per league</li>
+              <li>Broadcast automation and live analytics views for the NextXV rugby tournament</li>
+              <li>Contributed to the official SLPL and CPL league apps on iOS and Android</li>
+              <li>Custom websites and dashboards, including social media analytics dashboards for client surveys</li>
+            </ul>
+          </div>
+        </article>
+        <article class="job">
+          <div class="when">May 2022 – June 2023</div>
+          <div>
+            <h3>Software Engineer, Frontend</h3>
+            <div class="org">Baryon SE, Sweden</div>
+            <p>Built and maintained the frontend of a CE-certified Laboratory Information Management System (LIMS) under GLP/GMP frameworks using React.js. Also served as Scrum Master.</p>
+          </div>
+        </article>
+        <article class="job">
+          <div class="when">Nov 2020 – July 2021</div>
+          <div>
+            <h3>Business Development Executive, E-Commerce</h3>
+            <div class="org">Royal Lanka Agencies</div>
+            <p>Built and launched the finebrandz.lk e-commerce store on Shopify, and drove customer engagement through social media.</p>
+          </div>
+        </article>
+        <article class="job">
+          <div class="when">Jan 2018 – now</div>
+          <div>
+            <h3>Co-Founder</h3>
+            <div class="org">Izocele</div>
+            <p>Lead frontend development and technical strategy, delivering client websites and software projects.</p>
+          </div>
+        </article>
+        <article class="job">
+          <div class="when">Aug 2017 – Dec 2019</div>
+          <div>
+            <h3>Insurance Consultant</h3>
+            <div class="org">Arpico Insurance PLC</div>
+            <p>Received the NAFLIA award and ranked among the top 3 agents, managing 50+ clients.</p>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section id="projects" aria-labelledby="projects-h">
+      <h2 id="projects-h">Projects</h2>
+
+      <article class="feature">
+        <h3>Real-time sports broadcast automation</h3>
+        <div class="for">Key Sports Network, an Eventistry group company</div>
+        <p>Live production runs on tight timing. Lineups, auction bids, and scores need to reach the screen the moment they change, across long multi-day events, without slowing the crew down. I built the systems that push that data straight to on-air graphics.</p>
+        <div class="facts">
+          <div><b>5 days</b>of live coverage per league, including auctions</div>
+          <div><b>20+</b>member production teams worked alongside</div>
+          <div><b>3</b>sports: padel, pickleball, and rugby</div>
+        </div>
+        <p class="stack">React.js, Node.js, real-time data, AWS</p>
+      </article>
+
+      <div class="projects">
+        <article class="proj">
+          <h3>SLPL app</h3>
+          <div class="for">Sri Lanka Padel League, official app</div>
+          <p>Live scoring, standings, playoff brackets, fan polls, and push notifications for players and fans. I contributed as part of the Eventistry team.</p>
+          <div class="links">
+            <a href="https://apps.apple.com/lk/app/slpl/id6759237550" target="_blank" rel="noopener">App Store</a>
+            <a href="https://play.google.com/store/apps/details?id=com.eventistry.slpl" target="_blank" rel="noopener">Google Play</a>
+          </div>
+        </article>
+        <article class="proj">
+          <h3>CPL app</h3>
+          <div class="for">Ceylon Pickleball League, official app</div>
+          <p>The same live league experience for pickleball, on iOS and Android. I contributed as part of the Eventistry team.</p>
+          <div class="links">
+            <a href="https://apps.apple.com/lk/app/ceylon-pickle-league/id6802245070" target="_blank" rel="noopener">App Store</a>
+            <a href="https://play.google.com/store/apps/details?id=com.ceylonpickleleague.cpl" target="_blank" rel="noopener">Google Play</a>
+          </div>
+        </article>
+        <article class="proj wide">
+          <h3>Skin cancer detection with CNN image classification</h3>
+          <div class="for">MSc Data Science research, Cardiff Metropolitan University</div>
+          <p>A convolutional neural network that classifies skin lesion images into 7 categories, reaching 80% accuracy. Trained and optimized entirely on limited hardware (8 GB RAM).</p>
+          <p class="stack">Python, CNN, deep learning, computer vision</p>
+        </article>
+      </div>
+    </section>
+
+    <section id="skills" aria-labelledby="skills-h">
+      <h2 id="skills-h">Skills</h2>
+      <dl class="skills">
+        <dt>Languages</dt><dd>JavaScript, TypeScript, Python, PHP, SQL</dd>
+        <dt>Frontend &amp; mobile</dt><dd>React.js, React Native, Next.js, Astro, WordPress, Shopify</dd>
+        <dt>Backend</dt><dd>Node.js, NestJS, Express</dd>
+        <dt>Databases</dt><dd>MongoDB, PostgreSQL, MariaDB, Firebase</dd>
+        <dt>Cloud &amp; DevOps</dt><dd>AWS, Docker, Git, App Store and Google Play releases</dd>
+        <dt>Data science &amp; ML</dt><dd>TensorFlow, PyTorch, CNN image classification</dd>
+        <dt>Leadership</dt><dd>Agile/Scrum, technical leadership, mentoring, requirements gathering</dd>
+      </dl>
+
+      <h2 style="margin-top:56px">Education</h2>
+      <div class="edu">
+        <div><span><b>MSc Data Science (Merit)</b><br>Cardiff Metropolitan University, UK</span><span class="yr">2024</span></div>
+        <div><span><b>BEng Software Engineering (Second Upper, GPA 3.53)</b><br>IIC University of Technology</span><span class="yr">2021</span></div>
+        <div><span><b>Graduate Diploma in Software Engineering (SCQF 9)</b><br>Java Institute, Sri Lanka</span><span class="yr">2021</span></div>
+      </div>
+    </section>
+
+    <section id="contact" class="contact" aria-labelledby="contact-h">
+      <h2 id="contact-h">Building something live? Let's talk.</h2>
+      <a class="mail" href="mailto:pasindhu97@gmail.com">pasindhu97@gmail.com</a>
+      <div class="elsewhere">
+        <a href="https://www.linkedin.com/in/gehanpasindhu/" target="_blank" rel="noopener">LinkedIn</a>
+        <a href="https://github.com/GehanPasindhu" target="_blank" rel="noopener">GitHub</a>
+        <a href="https://www.kaggle.com/gpasindhu" target="_blank" rel="noopener">Kaggle</a>
+      </div>
+      <p class="avail">Open to on-site, hybrid, and remote roles, and to relocation. One month notice period.</p>
+    </section>
+  </main>
+
+  <footer>© <span id="yr">2026</span> Gehan Pasindhu</footer>
+</div>
+
+<script>
+  document.getElementById('yr').textContent = new Date().getFullYear();
+
+  // One orchestrated moment: the score bug plays out a few points, then settles.
+  (function () {
+    if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+    var a = document.getElementById('scoreA');
+    var b = document.getElementById('scoreB');
+    var clock = document.getElementById('clock');
+    var seq = [['B',4],['A',5],['B',5],['A',6]];
+    var secs = 1*3600 + 12*60 + 40;
+    var i = 0;
+
+    function set(el, v) {
+      el.textContent = v;
+      el.classList.remove('bump'); void el.offsetWidth; el.classList.add('bump');
+    }
+    var tick = setInterval(function () {
+      secs++;
+      var h = Math.floor(secs/3600), m = Math.floor(secs%3600/60), s = secs%60;
+      clock.textContent = h + ':' + String(m).padStart(2,'0') + ':' + String(s).padStart(2,'0');
+    }, 1000);
+    var play = setInterval(function () {
+      if (i >= seq.length) { clearInterval(play); setTimeout(function(){ clearInterval(tick); }, 4000); return; }
+      set(seq[i][0] === 'A' ? a : b, seq[i][1]);
+      i++;
+    }, 1800);
+  })();
+</script>
+</body>
+</html>
