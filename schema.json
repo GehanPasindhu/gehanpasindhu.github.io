@@ -1,0 +1,127 @@
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "WebSite",
+      "@id": "https://gehanpasindhu.github.io/#website",
+      "url": "https://gehanpasindhu.github.io/",
+      "name": "Gehan Pasindhu",
+      "description": "Portfolio of Gehan Pasindhu, Senior Software Engineer and Tech Lead in Colombo, Sri Lanka.",
+      "inLanguage": "en",
+      "publisher": { "@id": "https://gehanpasindhu.github.io/#person" }
+    },
+    {
+      "@type": "ProfilePage",
+      "@id": "https://gehanpasindhu.github.io/#profilepage",
+      "url": "https://gehanpasindhu.github.io/",
+      "name": "Gehan Pasindhu – Senior Software Engineer & Tech Lead",
+      "description": "Gehan Pasindhu, Senior Software Engineer and Tech Lead in Colombo, Sri Lanka. Real-time sports broadcast automation, React Native league apps, full-stack web, and data science.",
+      "isPartOf": { "@id": "https://gehanpasindhu.github.io/#website" },
+      "mainEntity": { "@id": "https://gehanpasindhu.github.io/#person" },
+      "dateModified": "2026-10-06",
+      "inLanguage": "en"
+    },
+    {
+      "@type": "Person",
+      "@id": "https://gehanpasindhu.github.io/#person",
+      "name": "Gehan Pasindhu",
+      "url": "https://gehanpasindhu.github.io/",
+      "image": "https://gehanpasindhu.github.io/icon.svg",
+      "email": "mailto:pasindhu97@gmail.com",
+      "jobTitle": "Senior Software Engineer & Tech Lead",
+      "description": "Senior Software Engineer and Tech Lead building real-time sports broadcast automation, league mobile apps, and full-stack web platforms.",
+      "worksFor": {
+        "@type": "Organization",
+        "name": "Eventistry",
+        "department": { "@type": "Organization", "name": "87.agency" }
+      },
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Colombo",
+        "addressCountry": "LK"
+      },
+      "nationality": { "@type": "Country", "name": "Sri Lanka" },
+      "knowsLanguage": [
+        { "@type": "Language", "name": "English", "alternateName": "en" },
+        { "@type": "Language", "name": "Sinhala", "alternateName": "si" }
+      ],
+      "alumniOf": [
+        { "@type": "CollegeOrUniversity", "name": "Cardiff Metropolitan University", "address": { "@type": "PostalAddress", "addressCountry": "GB" } },
+        { "@type": "CollegeOrUniversity", "name": "IIC University of Technology" },
+        { "@type": "EducationalOrganization", "name": "Java Institute" }
+      ],
+      "hasCredential": [
+        {
+          "@type": "EducationalOccupationalCredential",
+          "name": "MSc Data Science (Merit)",
+          "credentialCategory": "degree",
+          "educationalLevel": "Master's",
+          "recognizedBy": { "@type": "CollegeOrUniversity", "name": "Cardiff Metropolitan University" },
+          "dateCreated": "2024"
+        },
+        {
+          "@type": "EducationalOccupationalCredential",
+          "name": "BEng Software Engineering (Second Upper, GPA 3.53)",
+          "credentialCategory": "degree",
+          "educationalLevel": "Bachelor's",
+          "recognizedBy": { "@type": "CollegeOrUniversity", "name": "IIC University of Technology" },
+          "dateCreated": "2021"
+        },
+        {
+          "@type": "EducationalOccupationalCredential",
+          "name": "Graduate Diploma in Software Engineering (SCQF Level 9)",
+          "credentialCategory": "diploma",
+          "recognizedBy": { "@type": "EducationalOrganization", "name": "Java Institute" },
+          "dateCreated": "2021"
+        }
+      ],
+      "knowsAbout": [
+        "JavaScript", "TypeScript", "Python", "PHP", "SQL",
+        "React.js", "React Native", "Next.js", "Astro", "WordPress", "Shopify",
+        "Node.js", "NestJS", "Express",
+        "MongoDB", "PostgreSQL", "MariaDB", "Firebase",
+        "AWS", "Docker", "Git",
+        "TensorFlow", "PyTorch", "Convolutional neural networks",
+        "Real-time systems", "Broadcast automation", "Data science",
+        "Agile/Scrum", "Technical leadership", "Mentoring"
+      ],
+      "sameAs": [
+        "https://www.linkedin.com/in/gehanpasindhu/",
+        "https://github.com/GehanPasindhu",
+        "https://www.kaggle.com/gpasindhu"
+      ]
+    },
+    {
+      "@type": "MobileApplication",
+      "@id": "https://gehanpasindhu.github.io/#slpl-app",
+      "name": "SLPL",
+      "alternateName": "Sri Lanka Padel League official app",
+      "description": "Live scoring, standings, playoff brackets, fan polls, and push notifications for players and fans.",
+      "applicationCategory": "SportsApplication",
+      "operatingSystem": "iOS, Android",
+      "publisher": { "@type": "Organization", "name": "Eventistry" },
+      "contributor": { "@id": "https://gehanpasindhu.github.io/#person" },
+      "installUrl": [
+        "https://apps.apple.com/lk/app/slpl/id6759237550",
+        "https://play.google.com/store/apps/details?id=com.eventistry.slpl"
+      ],
+      "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" }
+    },
+    {
+      "@type": "MobileApplication",
+      "@id": "https://gehanpasindhu.github.io/#cpl-app",
+      "name": "Ceylon Pickle League",
+      "alternateName": "CPL app – Ceylon Pickleball League official app",
+      "description": "The live league experience for pickleball on iOS and Android.",
+      "applicationCategory": "SportsApplication",
+      "operatingSystem": "iOS, Android",
+      "publisher": { "@type": "Organization", "name": "Eventistry" },
+      "contributor": { "@id": "https://gehanpasindhu.github.io/#person" },
+      "installUrl": [
+        "https://apps.apple.com/lk/app/ceylon-pickle-league/id6802245070",
+        "https://play.google.com/store/apps/details?id=com.ceylonpickleleague.cpl"
+      ],
+      "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" }
+    }
+  ]
+}
