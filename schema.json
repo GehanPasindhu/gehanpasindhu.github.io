@@ -122,6 +122,18 @@
         "https://play.google.com/store/apps/details?id=com.ceylonpickleleague.cpl"
       ],
       "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" }
+    },
+    {
+      "@type": "WebApplication",
+      "@id": "https://gehanpasindhu.github.io/#earths-pulse",
+      "name": "Earth's Pulse",
+      "alternateName": "Earths Pulse – live earthquake tracker",
+      "url": "https://earthspulse.netlify.app/",
+      "description": "Real-time global earthquake map with seismic wave markers, intensity heatmaps, time and magnitude filters, and area-of-interest alerts.",
+      "applicationCategory": "ReferenceApplication",
+      "operatingSystem": "Web",
+      "creator": { "@id": "https://gehanpasindhu.github.io/#person" },
+      "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" }
     }
   ]
 }
